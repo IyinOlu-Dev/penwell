@@ -1,4 +1,4 @@
-**Blog Website**
+**Penwell**
 
 A full-stack blogging platform with a FastAPI backend, PostgreSQL database, and a vanilla JS/HTML frontend. Users can register, log in, write posts, and like other users' posts.
 
