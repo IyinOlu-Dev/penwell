@@ -15,7 +15,6 @@ from backend.oauth import create_access_token, get_current_user
 
 
 app = FastAPI()
-Base.metadata.create_all(bind=engine)
 
 from fastapi.middleware.cors import CORSMiddleware
 
