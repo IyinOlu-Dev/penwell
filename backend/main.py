@@ -1,3 +1,5 @@
+import os
+
 from fastapi import FastAPI, Body, Response, status, HTTPException, Depends
 
 from uuid import UUID
@@ -18,11 +20,13 @@ app = FastAPI()
 
 from fastapi.middleware.cors import CORSMiddleware
 
+origins = os.getenv ( "CORS_ORIGINS",
+                     "https://penwell.olucodes.com").split(",")
+
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://olublog.duckdns.org",
-                   "https://blog-f1vp.onrender.com",],
-    allow_credentials = True,
+    allow_origins=origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )

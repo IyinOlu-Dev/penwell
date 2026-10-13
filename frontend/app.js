@@ -1,5 +1,8 @@
 // Change this variable if your backend host/port changes
-const API_BASE_URL = '/api';
+const API_BASE_URL = 
+  location.hostname === 'localhost' || location.hostname === '127.0.0.1'
+    ? 'http://127.0.0.1:8000'
+    : '/api';;
 
 // Auto-run layout navigation sync on every page load
 document.addEventListener("DOMContentLoaded", syncNavbarView);
